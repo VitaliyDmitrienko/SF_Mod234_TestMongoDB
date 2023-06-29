@@ -32,18 +32,21 @@ public class Main {
             for (User user : repository.findAll()) {
                 System.out.println(user);
             }
-            System.out.println();
+            System.out.println("End of fetch.-------------------------------\n");
 
             // Ищем конкретного пользователя
             System.out.println("Customer found with findByFirstName('Tester'):");
             System.out.println("--------------------------------");
             System.out.println(repository.findByFirstName("Tester"));
+            System.out.println("End of fetch.-------------------------------\n");
 
             System.out.println("Customers found with findByEmail('test@test.com'):");
             System.out.println("--------------------------------");
             for (User User : repository.findByEmail("test@test.com")) {
                 System.out.println(User);
             }
+            System.out.println("End of fetch.-------------------------------\n");
+
 
         }
 
